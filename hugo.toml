@@ -1,0 +1,151 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = 'hugo-bootstrap'
+
+disableHugoGeneratorInject = true
+enableRobotsTXT = true
+enableGitInfo = true
+enableEmoji = true
+#sectionPagesMenu = "main"
+#googleAnalytics = "UA-1511XXXX-X"
+
+[frontmatter]
+  date = ["date", "publishDate", "lastmod"]
+  lastmod = ["lastmod", ":fileModTime", ":default"]
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  series = 'series'
+  author = "authors"
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.99.1"
+
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+
+  [markup.goldmark]
+
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+
+    [markup.goldmark.parser]
+      autoHeadingID = true
+      wrapStandAloneImageWithinParagraph = false
+
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
+
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = true
+      xHTML = false
+
+
+# Site Params
+
+# Open Graph, Twitter Cards and schema.org Thing and Article (in posts)
+# https://gohugo.io/templates/internal/#open-graph
+# https://gohugo.io/templates/internal/#twitter-cards
+# https://schema.org/Thing
+# https://schema.org/Article
+[params]
+  description = "Hugo theme for a secure, blazing fast and SEO-ready static website, using Bootstrap 5."
+  images = ['images/logo.svg','images/site-feature-image.png']
+  mainMenuLogo = "images/logo.svg"
+
+  themeColor = "#fff"
+
+# Alert
+  alert = false
+  alertDismissable = true
+  alertText = "Introducing this new service! <a class=\"alert-link stretched-link\" href=\"https://salvus.site/\">Check out Total Security</a>"
+
+# Pre-footer
+  footerAbout = true
+  footerAboutTitle = "Few Words About Us"
+  footerAboutText = "We protect your website so you can provide a safe environment to build trust and improve the user experience of your visitors.<br/><br/>Salvus Site is the partner that you can rely on for preventive and reactive cybersecurity."
+
+  [options]
+    bootStrapJs = true
+    breadCrumb = true
+    listCategoryFilter = true
+    listTagFilter = true
+
+[menus]
+[[menus.main]]
+name = "Home"
+url = ""
+weight = 10
+
+[[menus.main]]
+name = "About"
+url = "about"
+weight = 20
+title = "Made with ❤️ by the Hugo Bootstrap Theme team"
+
+[[menus.main]]
+identifier = "blog"
+name = "Blog"
+weight = 40
+
+[[menus.main]]
+name = "All"
+url = "post"
+weight = 100
+parent = "blog"
+
+[[menus.main]]
+name = "Hugo"
+url = "tags/hugo"
+weight = 20
+parent = "blog"
+
+[[menus.main]]
+name = "Bootstrap"
+url = "tags/bootstrap"
+weight = 30
+parent = "blog"
+
+[[menus.main]]
+identifier = "docs"
+name = "Docs"
+url = "page"
+weight = 50
+
+[[menus.social]]
+  name = "GitHub"
+  pre = "<svg xmlns='http://www.w3.org/2000/svg' class='feather feather-github'><use href='/hugo-bootstrap-theme/images/feather/feather-sprite.svg#github'/></svg>"
+  url = "https://github.com/filipecarneiro/hugo-bootstrap-theme/"
+  weight = 10
+  title = "Visit the GitHub project"
+
+[[menus.social]]
+  name = "Twitter"
+  pre = "<svg xmlns='http://www.w3.org/2000/svg' class='feather feather-twitter'><use href='/hugo-bootstrap-theme/images/feather/feather-sprite.svg#twitter'/></svg>"
+  url = "https://twitter.com/jfilipecarneiro/"
+  weight = 20
+  title = "Contact on Twitter"
