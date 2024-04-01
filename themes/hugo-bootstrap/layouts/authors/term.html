@@ -1,0 +1,38 @@
+{{ define "main" }}
+
+<div class="container pb-5">
+    <h1 class="my-3">{{ .Title }}</h1>
+
+    {{ with .Params.twitter }}
+    <p>
+        <a href="https://twitter.com/{{ substr . 1 }}">
+            Follow {{ $.Params.name }} on Twitter
+        </a>
+    </p>
+    {{ end }}
+    
+    {{ $image := .Resources.GetMatch (index ($.Param "images") 0) }}
+    <div class="row">
+        {{ with $image }}
+          {{ $imgp := .Resize "400x webp" }}
+        <div class="col-8 col-md-4 mt-2 mb-4">
+            <img class="img-fluid" src="{{ $imgp.Permalink }}" alt="{{ .Title }}" loading="lazy" />
+        </div>
+        {{ end }}
+        {{ with .Content  }}
+        <div class="col-12 col-md-8">
+            {{ . }}
+        </div>
+        {{ end }}
+    </div>
+
+
+    <h4 class="mt-3">Collaborations</h4>
+    <ul>
+        {{ range .Data.Pages }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
+    </ul>
+</div>
+
+{{ end }}

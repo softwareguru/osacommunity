@@ -1,5 +1,5 @@
 baseURL = 'https://osacom.io'
-title = 'My New Hugo Site'
+title = 'The Open Source Analytics Community'
 theme = 'hugo-bootstrap'
 
 disableHugoGeneratorInject = true
@@ -72,21 +72,11 @@ enableEmoji = true
 # https://schema.org/Thing
 # https://schema.org/Article
 [params]
-  description = "Hugo theme for a secure, blazing fast and SEO-ready static website, using Bootstrap 5."
+  description = "Some tagline or small description text."
   images = ['images/logo-h.svg','images/site-feature-image.png']
   mainMenuLogo = "images/logo-h.svg"
 
   themeColor = "#fff"
-
-# Alert
-  alert = false
-  alertDismissable = true
-  alertText = "Introducing this new service! <a class=\"alert-link stretched-link\" href=\"https://salvus.site/\">Check out Total Security</a>"
-
-# Pre-footer
-  footerAbout = true
-  footerAboutTitle = "Few Words About Us"
-  footerAboutText = "We protect your website so you can provide a safe environment to build trust and improve the user experience of your visitors.<br/><br/>Salvus Site is the partner that you can rely on for preventive and reactive cybersecurity."
 
   [params.options]
     bootStrapJs = true
@@ -98,48 +88,39 @@ enableEmoji = true
 [[menus.main]]
 name = "About"
 url = "about"
-weight = 20
-title = "Made with ❤️ by the Hugo Bootstrap Theme team"
+weight = 10
 
 [[menus.main]]
-identifier = "blog"
-name = "Blog"
+name = "News"
+url = "posts"
+weight = 20
+
+[[menus.main]]
+name = "Sessions"
+url = "sessions"
+weight = 30
+
+[[menus.main]]
+name = "Authors"
+url = "authors"
 weight = 40
 
 [[menus.main]]
-name = "All"
-url = "post"
-weight = 100
-parent = "blog"
-
-[[menus.main]]
-name = "Hugo"
-url = "tags/hugo"
-weight = 20
-parent = "blog"
-
-[[menus.main]]
-name = "Bootstrap"
-url = "tags/bootstrap"
-weight = 30
-parent = "blog"
-
-[[menus.main]]
-identifier = "docs"
-name = "Docs"
-url = "page"
+name = "Contact"
+url = "contact"
 weight = 50
+
 
 [[menus.social]]
   name = "GitHub"
-  pre = "<svg xmlns='http://www.w3.org/2000/svg' class='feather feather-github'><use href='/images/feather/feather-sprite.svg#github'/></svg>"
-  url = "https://github.com/filipecarneiro/hugo-bootstrap-theme/"
+  pre = "<svg xmlns='http://www.w3.org/2000/svg' class='feather feather-github'><use href='/images/feather/feather-sprite.svg#youtube'/></svg>"
+  url = "https://youtube.com"
   weight = 10
-  title = "Visit the GitHub project"
+  title = "Visit our YouTube channel"
 
 [[menus.social]]
   name = "Twitter"
   pre = "<svg xmlns='http://www.w3.org/2000/svg' class='feather feather-twitter'><use href='/images/feather/feather-sprite.svg#twitter'/></svg>"
   url = "https://twitter.com/jfilipecarneiro/"
   weight = 20
-  title = "Contact on Twitter"
+  title = "Follow us on Twitter"

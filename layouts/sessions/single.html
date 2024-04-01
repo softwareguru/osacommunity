@@ -1,0 +1,47 @@
+{{ define "main" }}
+
+<div class="container">
+    <h1>{{ .Title }}</h1>
+
+    <div class="row d-flex">
+        <div class="col-4 col-md-2">Event: </div>
+        <div class="col-4 col-md-3">
+            <a href="{{ .CurrentSection.Permalink }}">{{ .CurrentSection.Title }}</a>
+        </div>  
+    </div>
+
+    <div class="row d-flex">
+        <div class="col-4 col-md-2">Speaker(s): </div>
+        <div class="col-4 col-md-3">
+            {{ range (.GetTerms "authors") }}
+                  <a href="{{ .Permalink }}">{{ .Title }}</a> <br>
+            {{ end }}
+        </div>  
+    </div>
+
+    <div class="my-3">
+    {{ .Content }}
+    </div>
+
+    {{ with .Params.slides }}
+      {{ if hasPrefix . "http" }}
+        <a href='{{ . }}' target='_blank' download>Download slides</a>
+      {{ else }}  
+        {{ with $.Resources.GetMatch . }}
+          <a href='{{ .Permalink }}' target='_blank' download>Download slides</a>
+        {{ end }}
+      {{ end }}
+    {{ end }}  
+
+
+    {{ with .Params.video }}
+    <div class="my-3">
+      <iframe id="video-iframe" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0"
+        allowtransparency="true" src='{{ replace . "https://youtu.be" "https://www.youtube.com/embed"}}'
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"
+        webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+    </div>
+    {{ end }}
+</div>
+
+{{ end }}

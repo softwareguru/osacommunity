@@ -1,32 +1,32 @@
 {{ define "main" }}
 
 <div class="container pb-5">
-    <h1>{{ .Title }}</h1>
+    <h1>Authors</h1>
+    <div class="lead">
+        {{ .Content }}
+    </div>
 
-    {{ $image := .Resources.GetMatch (index ($.Param "images") 0) }}
-    {{ with $image }}
-        <img src="{{ $image.Permalink }}" alt="{{ .Title }}" loading="lazy" />
-    {{ end }}
-
-    {{ with .Content  }}
-    <h2>Bio</h2>
-        {{ . }}
-    {{ end }}
-
-    {{ with .Params.twitter }}
-    <p>
-        <a href="https://twitter.com/{{ substr . 1 }}">
-            Follow {{ $.Params.name }} on Twitter
-        </a>
-    </p>
-    {{ end }}
-
-    <h2>Articles</h2>
-    <ul>
-        {{ range .Data.Pages }}
-            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    <div class="speaker-strip">
+        {{ range .Data.Pages.ByTitle }}
+        <div class="speaker-item">
+          <div class="speaker-block">
+            <div class="headshot-box">
+              <a href="{{.Permalink}}">
+                  {{ $img := .Resources.Get (index .Params.images 0) }}
+                  {{ with $img }}
+                    {{ $imgp := $img.Resize "400x webp" }}
+                    <img src="{{$imgp.Permalink }}" alt="Photo of {{.Title}}" class="img-fluid">
+                  {{ end }}  
+              </a>
+            </div>
+            <div class="speaker-info text-center">
+              <h4 class="my-0"><a href="{{.Permalink | relURL }}">{{ .Title }}</a></h4>
+            </div>
+          </div>
+        </div>
         {{ end }}
-    </ul>
+      </div>
+  
 </div>
 
 {{ end }}

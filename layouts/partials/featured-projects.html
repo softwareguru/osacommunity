@@ -1,0 +1,18 @@
+{{ $data := index .Site.Data }}
+
+{{ with $data.projects }}
+<section class="section featured-projects">
+  <div class="row">
+    <div class="col-12 col-md-8">
+      <div class="d-flex justify-content-around flex-wrap">
+        {{ range .projects }}
+          <div class="project-logo"><img src="{{.image}}" alt="{{.name}}"></div>
+        {{ end }}
+      </div>
+    </div>
+    <div class="col-6 col-md-4">
+      <p>Open source projects like ... and many others have shaped the future of analytic systems.</p>
+    </div>
+  </div>
+</section>
+{{ end }}
