@@ -110,7 +110,7 @@ weight = 30
 
 [[menus.main]]
 name = "OSA CON"
-url = "/osacon"
+url = "https://osacon.io"
 weight = 30
 
 [[menus.main]]
