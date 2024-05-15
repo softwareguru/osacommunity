@@ -72,6 +72,8 @@ body {
 }
 
 .featured-projects {
+
+  margin-bottom: 30px;
   
   .project-logo {
     display: flex;
@@ -83,6 +85,10 @@ body {
     align-self: center;
     justify-self: center;
     justify-content: center;
+
+    @media (max-width:992px) {
+      width: 80px;
+    }
   }
 
   .project-logo img {
@@ -129,6 +135,9 @@ body {
 .hero-container {
   display: grid;
   grid-template-columns: 55% 1fr;
+  @media (max-width:992px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 
@@ -141,6 +150,10 @@ section {
 .vision-container {
   display: grid;
   grid-template-columns: 75% 1fr;
+  @media (max-width:992px) {
+    grid-template-columns: 1fr;
+  }
+
   align-items: center;
 }
 
@@ -165,11 +178,18 @@ section.join-community {
 .join-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+}
+
+.join-us {
+  @media (max-width:992px) {
+    text-align: center;
+  }
 }
 
 .join-card {
   width: 500px;
-  margin: 0 40px;
+  margin: 0 40px 40px 40px;
   background-color: white;
 
   .card-title {
