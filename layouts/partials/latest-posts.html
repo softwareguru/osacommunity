@@ -1,6 +1,8 @@
+<section class="container">
+    <h3 class="text-secondary text-center my-5">Latest News</h3>  
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
-    {{ range first 3 (where .Site.RegularPages.ByDate.Reverse "Section" "post" ) }}
+    {{ range first 3 (where .Site.RegularPages.ByDate.Reverse "Section" "posts" ) }}
         <div class="col">
 
             <div class="card h-100">
@@ -32,3 +34,4 @@
     {{ end }}
 
 </div>
+</section>

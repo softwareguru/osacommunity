@@ -1,0 +1,16 @@
+{{ $data := index .Site.Data }}
+
+<section class="container border-bottom">
+    <div class="vision-container">
+      <div class="vision-text">
+        {{ with $data.homepage }}
+        <h3>We’re setting the stage for a new chapter in open source analytics.</h3>
+        <p>{{ .vision }}</p>
+        {{ end }} 
+      </div>
+      <div class="vision-link">
+        <a href="/manifesto">Read our manifesto</a>
+      </div>
+    </div>
+  </section>
+  

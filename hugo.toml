@@ -72,7 +72,7 @@ enableEmoji = true
 # https://schema.org/Thing
 # https://schema.org/Article
 [params]
-  description = "Some tagline or small description text."
+  description = "Discover, collaborate, and innovate with developers, projects, and companies across the open-source data stack."
   images = ['images/logo-h.svg','images/site-feature-image.png']
   mainMenuLogo = "images/logo-h.svg"
 
@@ -87,23 +87,31 @@ enableEmoji = true
 
 [[menus.main]]
 name = "About"
-url = "about"
+url = "/manifesto"
 weight = 10
+
+[[menus.main]]
+identifier = "resources"
+name = "Resources"
+weight = 20
+
 
 [[menus.main]]
 name = "News"
 url = "posts"
-weight = 20
+parent="resources"
+weight = 10
 
 [[menus.main]]
-name = "Sessions"
-url = "sessions"
+name = "Sessions OSA CON 2023"
+url = "sessions/2023"
+parent="resources"
 weight = 30
 
 [[menus.main]]
-name = "Authors"
-url = "authors"
-weight = 40
+name = "OSA CON"
+url = "/osacon"
+weight = 30
 
 [[menus.main]]
 name = "Contact"
@@ -114,13 +122,13 @@ weight = 50
 [[menus.social]]
   name = "GitHub"
   pre = "<svg xmlns='http://www.w3.org/2000/svg' class='feather feather-github'><use href='/images/feather/feather-sprite.svg#youtube'/></svg>"
-  url = "https://youtube.com"
+  url = "https://www.youtube.com/@OpenSourceAnalyticsConference"
   weight = 10
   title = "Visit our YouTube channel"
 
 [[menus.social]]
   name = "Twitter"
   pre = "<svg xmlns='http://www.w3.org/2000/svg' class='feather feather-twitter'><use href='/images/feather/feather-sprite.svg#twitter'/></svg>"
-  url = "https://twitter.com/jfilipecarneiro/"
+  url = "https://twitter.com/"
   weight = 20
   title = "Follow us on Twitter"

@@ -1,11 +1,23 @@
 {{ define "main" }}
 
-<section class="section bd-masthead border-bottom">
-  <div class="container">
-    <div class="mt-4">
-      <h1 class="display-4 mb-3">The Open Source<br>Analytics Community</h1>
-      <p class="display-6 mb-4">{{ .Site.Params.Description }}</p>
+{{ $data := index .Site.Data }}
+
+<section class="bd-masthead border-bottom">
+  <div class="container mt-4">
+    <div class="hero-container">
+      <div class="hero-info">
+        <h1 class="display-4 mb-3">The Open Source<br>Analytics Community</h1>
+        <p class="display-6 mb-4">{{ .Site.Params.Description }}</p>  
+      </div>
+
+      <div class="featured-projects d-flex justify-content-around flex-wrap">
+        {{ range $data.homepage.projects }}
+          <div class="project-logo"><img src="{{.image}}" alt="{{.name}}"></div>
+        {{ end }}
+      </div>
+
     </div>
+
     <div class="join-us">
       <div data-tf-live="01HT99QA9C1EZ3VPTHGHBEQA6J"></div><script src="//embed.typeform.com/next/embed.js"></script>
     </div>
@@ -13,21 +25,12 @@
   </div>
 </section>
 
-<section class="section container py-5 border-bottom">
-  {{ partial "featured-projects" . }}
-</section>
+{{ partial "manifesto" . }}
 
-<section>
+{{ partial "join-community" . }}
 
-</section>
+{{ partial "sponsors" . }}
 
-<section class="section container my-3">
-  <h3 class="text-secondary text-center my-5">Latest News</h3>
-  {{ partial "latest-posts" . }}
-</section>
-
-<section class="section container py-5">
-  {{ partial "sponsors" . }}
-</section>
+{{ partial "latest-posts" . }}
 
 {{ end }}

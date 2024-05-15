@@ -1,6 +1,5 @@
 <section id="partners" class="section partners">
     <div class="container">
-      <h2 class="principles-header text-center">Sponsored by</h2>
   
       <div id="platinum">
         {{range $index, $value := where (where .Site.RegularPages "Section" "partners") ".Params.level" "founding" }} 
@@ -10,13 +9,14 @@
           {{ end }}
               <div class="sponsor-item">
                 <a title="{{ .Title }}" href="{{ .Params.webUrl }}" target="_blank">
-                <img src="{{ .Params.logo }}" alt="{{ .Title }}" />
+                <img class="img-fluid" src="{{ .Params.logo }}" alt="{{ .Title }}" />
                 </a>
               </div>
         {{ end }}
             </div>
       </div>
 
+      <p class="text-center">OSA Com is a project-neutral forum and is open to all open source developers. We welcome organizations who develop or depend on open source analytics to join our founding team. Help our community grow.</p>
   
     </div>
   </section>

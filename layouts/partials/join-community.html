@@ -1,0 +1,25 @@
+{{ $data := index .Site.Data }}
+
+{{ with $data.homepage }}
+<section class="join-community">
+  <div class="join-container container">
+    {{ range .jointypes }}
+        <div class="join-card">
+          <div class="card-title" style="background-color: {{ .bgcolor}}">{{.title}}</div>
+          <div class="card-body">
+            <ul>
+            {{ range .benefits }}
+              <li>{{.}}</li>
+            {{ end }}
+            </ul>
+          </div>
+        </div>
+    {{ end }}
+  </div>
+  <div class="container mt-5 text-center">
+    <p>Thousands of developers have made the OSA COM their community. You should too.</p>
+    <div class="mt-4" data-tf-live="01HT99QA9C1EZ3VPTHGHBEQA6J"></div><script src="//embed.typeform.com/next/embed.js"></script>
+
+  </div>  
+</section>
+{{ end }}

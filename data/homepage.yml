@@ -1,0 +1,70 @@
+vision: "We envision a future where analytics software is not only free for everyone to use and enhance but where the best tools seamlessly work together within a fair and transparent marketplace, free from the constraints of unjust pricing and proprietary barriers." 
+
+jointypes:
+  - title: Contributors
+    bgcolor: "#ffd9ee"
+    benefits:
+      - Meet the people and projects who will leverage and integrate with your project.
+      - Network with your fellow creators.
+      - Evangelize your projects and share creative ways to use apply them in real applications.
+      - Get ideas for ways to make your project more valuable to a wider community.
+
+  - title: Community members
+    bgcolor: "#f0d9ff"
+    benefits:
+      - Learn how to develop analytic applications on open source.
+      - Keep up with the state of technology in analytics.
+      - Ask questions and bounce ideas around in a friendly and supportive community.
+      - Get new ideas for using data in your workplace.
+      - Speak freely about COSS/SaaS vendors outside the constraints of OSS foundations and vendor neutrality restrictions.
+
+
+
+projects:
+    - name: Superset
+      image: /images/projects/superset.svg
+
+    - name: Presto
+      image: /images/projects/presto.svg
+
+    - name: DuckDB
+      image: /images/projects/duckdb.svg
+
+    - name: Airflow
+      image: /images/projects/airflow.svg
+
+    - name: Kafka
+      image: /images/projects/kafka.svg
+
+    - name: Flink
+      image: /images/projects/flink.png  
+
+    - name: Grafana
+      image: /images/projects/grafana.svg  
+
+    - name: Iceberg
+      image: /images/projects/iceberg.svg  
+
+    - name: Arrow
+      image: /images/projects/arrow.svg  
+
+    - name: dbt
+      image: /images/projects/dbt.svg  
+
+    - name: Hudi
+      image: /images/projects/hudi.png
+
+    - name: Nifi
+      image: /images/projects/nifi.svg
+    
+    - name: Meltano
+      image: /images/projects/meltano.svg  
+
+    - name: Starrocks
+      image: /images/projects/starrocks-logo.png  
+
+    - name: Cassandra
+      image: /images/projects/cassandra.svg
+
+    - name: Kubernetes
+      image: /images/projects/kubernetes.png  

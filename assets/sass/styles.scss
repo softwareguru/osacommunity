@@ -16,7 +16,6 @@ body {
     --bd-pink-rgb: 214,51,132;
 
     .bd-masthead {
-        padding: 3rem 0;
     //    background-image: linear-gradient(180deg, rgba(var(--bs-body-bg-rgb), 0.01), rgba(var(--bs-body-bg-rgb), 1) 85%),radial-gradient(ellipse at top left, rgba(var(--bs-primary-rgb), 0.5), transparent 50%),radial-gradient(ellipse at top right, rgba(var(--bd-accent-rgb), 0.5), transparent 50%),radial-gradient(ellipse at center right, rgba(var(--bd-violet-rgb), 0.5), transparent 50%),radial-gradient(ellipse at center left, rgba(var(--bd-pink-rgb), 0.5), transparent 50%);
       h1 {
         font-weight: 700;
@@ -76,9 +75,9 @@ body {
   
   .project-logo {
     display: flex;
-    width: 160px;
+    width: 140px;
     height: 40px;
-    margin: 20px;
+    margin: 15px;
     align-items: center;
     align-content: center; 
     align-self: center;
@@ -106,6 +105,7 @@ body {
 
 	.sponsor-item {
 		margin: 2em;
+    width: 280px;
 	}
 
 }
@@ -123,5 +123,66 @@ body {
     margin: 1.2rem 0;
   a {
     text-decoration: none;
+  }
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 55% 1fr;
+}
+
+
+section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+
+.vision-container {
+  display: grid;
+  grid-template-columns: 75% 1fr;
+  align-items: center;
+}
+
+.vision-text {
+  h3 {
+    font-size: 2rem;
+  }  
+}
+
+.vision-link {
+  text-align: center;
+  text-transform: uppercase;
+  a {
+    color: #505050;
+  }
+}
+
+section.join-community {
+  background-color: #e0e0e040;
+}
+
+.join-container {
+  display: flex;
+  justify-content: center;
+}
+
+.join-card {
+  width: 500px;
+  margin: 0 40px;
+  background-color: white;
+
+  .card-title {
+    text-align: center;
+    padding: 1em 2em;
+    font-weight: 500;
+    font-size: 1.1em;
+  }
+  .card-body {
+    padding: 1em;
+    font-size: 0.9em;
+  }
+  li {
+    margin-bottom: 0.7em;
   }
 }
