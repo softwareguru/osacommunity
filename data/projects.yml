@@ -45,5 +45,5 @@ items:
     - name: Cassandra
       image: /images/projects/cassandra.svg
 
-    - name: Kubernetes
-      image: /images/projects/kubernetes.png  
+    - name: Dagster
+      image: /images/partners/dagster.png  

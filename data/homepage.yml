@@ -68,3 +68,6 @@ projects:
 
     - name: Kubernetes
       image: /images/projects/kubernetes.png  
+
+    - name: Dagster
+      image: /images/partners/dagster.png  
