@@ -1,4 +1,4 @@
-baseURL = 'https://osacom.netlify.app/'
+baseURL = 'https://osacom.io/'
 title = 'The Open Source Analytics Community'
 theme = 'hugo-bootstrap'
 
