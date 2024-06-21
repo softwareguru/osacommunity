@@ -7,23 +7,44 @@
     <div class="hero-container">
       <div class="hero-info">
         <h1 class="display-4 mb-3">The Open Source<br>Analytics Community</h1>
-        <p class="display-6 mb-4">{{ .Site.Params.Description }}</p>  
+        <p class="hero-desc mb-4">{{ .Site.Params.Description }}</p>  
       </div>
 
-      <div class="featured-projects d-flex justify-content-around flex-wrap">
-        {{ range $data.homepage.projects }}
-          <div class="project-logo"><img src="{{.image}}" alt="{{.name}}"></div>
-        {{ end }}
+      <div class="join-us mb-4">
+        <div data-tf-live="01HT99QA9C1EZ3VPTHGHBEQA6J"></div><script src="//embed.typeform.com/next/embed.js"></script>
+      </div>
+
+      <div class="projects-section">
+        <p class="mt">Today’s analytic systems have been shaped by open source projects such as: </p>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper featured-projects">
+          {{ range $data.homepage.projects }}
+            <div class="swiper-slide project-logo"><img src="{{.image}}" alt="{{.name}}"></div>
+          {{ end }}
+          </div>
+        </div>
+
       </div>
 
     </div>
-
-    <div class="join-us">
-      <div data-tf-live="01HT99QA9C1EZ3VPTHGHBEQA6J"></div><script src="//embed.typeform.com/next/embed.js"></script>
-    </div>
-  
-  </div>
+  </div>  
 </section>
+
+<script>
+var swiper = new Swiper(".mySwiper", {
+  spaceBetween: 0,
+  slidesPerView: 'auto',
+  speed: 6000,
+  centeredSlides: true,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+    waitforTransition: false,
+  },
+  loop: true,
+});
+</script>
+
 
 {{ partial "manifesto" . }}
 

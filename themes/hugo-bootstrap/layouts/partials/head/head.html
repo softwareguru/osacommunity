@@ -7,5 +7,10 @@
     {{ block "head/favicons" . }}{{ partial "head/favicons.html" . }}{{ end }}
     {{ if .IsHome }}
       <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+      {{ $js := resources.Get "js/swiper-bundle.js" }}
+      {{ with $js }}
+        {{ $js := . | minify | fingerprint "sha512" -}}
+        <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" crossorigin="anonymous"></script>
+      {{ end }}
     {{ end }}
 </head>

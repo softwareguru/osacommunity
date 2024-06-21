@@ -15,3 +15,11 @@ $dark:          #212529;
 $body-bg: #fff;
 $body-color: #363b3f;
 $font-size-base: 1.2rem;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1200px
+);
