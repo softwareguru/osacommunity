@@ -252,3 +252,84 @@ section.join-community {
 .swiper-wrapper{
   transition-timing-function : linear;
 }
+
+
+@mixin dots($count) {
+  $text-shadow: ();
+  @for $i from 0 through $count {
+    $text-shadow: $text-shadow,
+                 (-.5+(random()) * 3) + em
+                 (-.5+(random()) * 3) + em
+                 7px
+                 hsla(random() * 360, 100%, 50%,.9);
+  }
+  text-shadow: $text-shadow;
+}
+.bd-masthead {
+  position: relative;
+  background: #132F48;
+  color: #fff;
+  overflow:hidden;
+}
+
+.bd-masthead>* {
+  position: relative;
+}
+
+.bd-masthead .mySwiper {
+  background: #fff;
+  border-radius: 24px;
+  padding: 10px 0;
+  margin-bottom: 20px
+}
+
+.bd-masthead .mySwiper .featured-projects {
+  margin-bottom: 0;
+}
+
+.bd-masthead::before, .bd-masthead::after  {
+  position: absolute;
+  font-size: 50px;
+  top: 50%;
+  left: 50%;
+  width: 3em;
+  height: 3em;
+  content: '.';
+  mix-blend-mode: screen;
+  animation: 44s -27s move infinite ease-in-out alternate;
+  z-index: 0;
+  pointer-events: none;
+  color: transparent;
+}
+
+.bd-masthead::before {
+  @include dots(40);
+  animation-duration: 44s;
+  animation-delay: -27s;
+}
+
+.bd-masthead::after {
+  @include dots(40);
+  animation-duration: 43s;
+  animation-delay: -32s;
+}
+
+
+@keyframes move {
+  from {
+    transform: rotate(0deg) scale(12) translateX(-20px);
+  }
+  to {
+    transform: rotate(360deg) scale(18) translateX(20px);
+  }
+}
+
+.join-community, .latest-posts {
+  background: radial-gradient(ellipse at center center, rgb(37, 93, 143) 0%, rgb(19, 47, 72) 100%);
+  padding: 60px 1em;
+}
+
+.join-card {
+  border-radius: 0.375rem;
+  overflow:hidden;
+}
