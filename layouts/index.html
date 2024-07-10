@@ -14,22 +14,21 @@
         <div data-tf-live="01HT99QA9C1EZ3VPTHGHBEQA6J"></div><script src="//embed.typeform.com/next/embed.js"></script>
       </div>
 
-      <div class="projects-section">
-        <p class="mt">Today’s analytic systems have been shaped by open source projects such as: </p>
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper featured-projects">
-          {{ range $data.homepage.projects }}
-            <div class="swiper-slide project-logo"><img src="{{.image}}" alt="{{.name}}"></div>
-          {{ end }}
-          </div>
-        </div>
 
-      </div>
 
     </div>
   </div>  
 </section>
-
+<section class="projects-section text-center">
+  <p class="mt">Today’s analytic systems have been shaped by open source projects such as: </p>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper featured-projects">
+    {{ range $data.homepage.projects }}
+      <div class="swiper-slide project-logo"><img src="{{.image}}" alt="{{.name}}"></div>
+    {{ end }}
+    </div>
+  </div>
+</section >
 <script>
 var swiper = new Swiper(".mySwiper", {
   spaceBetween: 0,
