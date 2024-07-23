@@ -109,6 +109,12 @@ parent="resources"
 weight = 30
 
 [[menus.main]]
+name = "Events"
+url = "events"
+parent="resources"
+weight = 40
+
+[[menus.main]]
 name = "OSA CON"
 url = "https://osacon.io"
 weight = 30
@@ -120,15 +126,22 @@ weight = 50
 
 
 [[menus.social]]
-  name = "GitHub"
+  name = "YouTube"
   pre = "<svg xmlns='http://www.w3.org/2000/svg' class='feather feather-github'><use href='/images/feather/feather-sprite.svg#youtube'/></svg>"
   url = "https://www.youtube.com/@OpenSourceAnalyticsConference"
   weight = 10
   title = "Visit our YouTube channel"
 
 [[menus.social]]
-  name = "Twitter"
-  pre = "<svg xmlns='http://www.w3.org/2000/svg' class='feather feather-twitter'><use href='/images/feather/feather-sprite.svg#twitter'/></svg>"
-  url = "https://twitter.com/"
+  name = "Slack"
+  pre = "<svg xmlns='http://www.w3.org/2000/svg' class='feather feather-slack'><use href='/images/feather/feather-sprite.svg#slack'/></svg>"
+  url = "https://join.slack.com/t/osacommunityworkspace/shared_invite/zt-2j5oq8pa9-3z2STvxxRsrzhYkPOMwX4A"
   weight = 20
-  title = "Follow us on Twitter"
+  title = "Join us on Slack"
+
+[[menus.social]]
+  name = "LinkedIn"
+  pre = "<svg xmlns='http://www.w3.org/2000/svg' class='feather feather-linkedin'><use href='/images/feather/feather-sprite.svg#linkedin'/></svg>"
+  url = "https://www.linkedin.com/showcase/osa-con/"
+  weight = 30
+  title = "Connect on LinkedIn"
