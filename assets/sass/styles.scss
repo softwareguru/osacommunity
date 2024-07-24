@@ -39,9 +39,18 @@ body {
     }
 }
 
+
 p {
   margin-top: 1.8rem;
   margin-bottom: 1.2rem;
+}
+
+#content p+h2, 
+#content p+h3, 
+#content ul+h2, 
+#content ul+h3, 
+#content h2+h3 {
+    margin-top: 2rem;
 }
 
 .navbar {
