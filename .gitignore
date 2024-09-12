@@ -1,6 +1,6 @@
 .DS_Store
+.idea
 public
 node_modules
 resources
 .hugo_build.lock
-
