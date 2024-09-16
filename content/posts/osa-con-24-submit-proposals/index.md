@@ -1,6 +1,6 @@
 ---
 title: "OSA Con 2024: Submit Your Proposals on Open Source Analytics Today!"
-description: "We’re excited to learn how your projects and applications are navigating these currents. "
+description: "We’re excited to learn how your projects and applications are navigating these currents!"
 date: 2024-07-23
 images: ["General-TW-1536x864.png"]
 categories: ["Events"]
@@ -23,4 +23,4 @@ For 2024 we’re sticking with last year’s format of three half days of virtua
 
 Maybe you want to sponsor as well? This is a chance to get your company on board as a supporter of open source and analytic applications. It’s where the developers are! And it’s wa-a-ay inexpensive. We run the whole thing for the cost of a medium-sized booth at most in-person conferences. Have a look at the sponsorship prospectus and contact us to sign up. 
 
-P.s., Need more information or want to sponsor? Email us at hello@osacon.io or join our #osa-conference Slack channel. 
+P.S. Need more information or want to sponsor? Email us at hello@osacon.io or join our [#osa-conference Slack channel](https://osacommunityworkspace.slack.com/). 
