@@ -1,4 +1,6 @@
-+++
-title = "Events"
-tags = [""]
-+++
+---
+title : "Events"
+tags : ["Events"]
+eventsList : true
+
+---

@@ -1,7 +1,7 @@
 ---
 title: "Dashtool - A data build tool designed for using Iceberg Materialized Views for data transformations"
 description: "Join us December 3rd, 2024 for this free online event."
-time_start: 2023-3-12T15:00:00-04:00
+time_start: 2024-3-12T15:00:00-04:00
 images: ["event-dashtool.png"]
 hidedate: true
 ---
