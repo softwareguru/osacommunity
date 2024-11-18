@@ -1,7 +1,7 @@
 ---
 title: "How modern engines unlock the full potential of Apache Superset"
 description: "December 11th, 2024 for this free online event."
-time_start: 2024-11-12T15:00:00-04:00
+time_start: "2024-12-11"
 images: ["event-superset.png"]
 hidedate: true
 ---
