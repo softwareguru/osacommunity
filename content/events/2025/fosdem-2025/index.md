@@ -1,7 +1,7 @@
 ---
 title: "FOSDEM 2025"
 description: "Join us Feb 1-2, 2025 at FOSDEM."
-time_start: 2025-1-2T15:00:00-04:00
+time_start: "2025-02-01"
 images: ["fosdem.png"]
 hidedate: false
 ---

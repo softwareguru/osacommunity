@@ -1,8 +1,7 @@
 ---
 title: "OSA CON 2024"
 description: "Join us November 19-21, 2024 for this free online event."
-time_start: 2024-19-11T11:00:00-04:00
-time_end: 2024-21-11T11:10:00-04:00
+time_start: "2024-11-19"
 images: ["osa-con-24.png"]
 hidedate: true
 ---
