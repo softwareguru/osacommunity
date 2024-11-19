@@ -100,7 +100,7 @@
             <li class="nav-item">
               <a class="nav-link" href="{{ .URL | relLangURL }}" target='{{ if in .URL "https://" }}_blank{{ else }}_self{{ end }}'{{ with .Title }} title='{{ . }}' aria-label='{{ . }}'{{ end }}>
                 {{ .Pre | safeHTML }}<small class="ms-2 d-md-none">{{ .Name | safeHTML }}</small>
-              </a>
+              </a> 
             </li>
             {{ end -}}
           </ul>

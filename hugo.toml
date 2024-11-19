@@ -135,7 +135,7 @@ weight = 50
 [[menus.social]]
   name = "Slack"
   pre = "<svg xmlns='http://www.w3.org/2000/svg' class='feather feather-slack'><use href='/images/feather/feather-sprite.svg#slack'/></svg>"
-  url = "https://join.slack.com/t/osacommunityworkspace/shared_invite/zt-2j5oq8pa9-3z2STvxxRsrzhYkPOMwX4A"
+  url = "https://go.osacom.io/slack"
   weight = 20
   title = "Join us on Slack"
 
