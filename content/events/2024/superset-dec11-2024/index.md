@@ -13,7 +13,7 @@ hidedate: true
     <img src="/events/2024/superset-dec11-2024/event-superset.png" alt="" style="width:100%;height:auto" /><br /><br />
   </div>
   <div class="col-12 col-lg-4" style="border-radius:12px;box-shadow:0 0 14px rgba(0,0,0,0.1);padding:1em">
-    <h6>December 11th, 2024 17:00 UTC</h6>
+    <h6>December 11th, 2024 at 10am PT</h6>
     <h4>Register Here</h4>
     <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
     <script>
