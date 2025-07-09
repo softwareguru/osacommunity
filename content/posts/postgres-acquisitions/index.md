@@ -11,7 +11,7 @@ categories: ["News"]
   <div class="row">
   <div class="col-12 pb-3 pe-lg-5">
     <h1 style="font-size:2.5rem;">Postgres Acquisitions Driven by Agentic Architectures</h1>
-    <p style="font-size:0.75em;">By Joshua Lee | July 9, 2025</p>
+    <p style="font-size:0.75em; margin-top: 5px;">By Joshua Lee | July 9, 2025</p>
     <div class="ratio ratio-16x9 py-3" style="max-width:890px;">
      <img src="PostgreSQL-Acquisitions.jpg" alt="Postgres Acquisitions Driven by Agentic Architectures" />
     </div>
