@@ -45,12 +45,21 @@ p {
   margin-bottom: 1.2rem;
 }
 
+h4 + p {
+  /* your styles here */
+  margin-top: 0;
+}
+
 #content p+h2, 
 #content p+h3, 
 #content ul+h2, 
 #content ul+h3, 
 #content h2+h3 {
     margin-top: 2rem;
+}
+
+.author {
+  font-size: 1rem;
 }
 
 .navbar {

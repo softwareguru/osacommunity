@@ -1,0 +1,9 @@
+{{ define "main" }}
+
+<div class="container py-3">
+  <h1>{{ .Title }}</h1>
+  {{ with .Params.authors }}<div class="author">by {{ delimit . ", " " & " }}</div>{{ end }}
+  {{ .Content }}
+</div>
+
+{{ end }}
