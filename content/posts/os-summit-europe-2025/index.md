@@ -8,14 +8,19 @@ authors:
  - Josh Lee
 
 ---
-
+<div class="py-3">
+  <div class="row">
+  <div class="col-12 pb-3 pe-lg-5">
+    <h1 style="font-size:2.5rem;">Open Source Summit Europe 2025: Strengthening the Foundation of Open Innovation</h1>
+    <p style="font-size:0.75em; margin-top: 5px;">By Joshua Lee | September 10, 2025</p>
+    <div class="ratio ratio-16x9 py-3" style="max-width:890px;">
+     <img src="ossummit-eu-25.jpg" alt="Open Source Summit Europe 2025" />
+    </div>
+  </div>
+</div>
+</div>
 
 Open Source Summit Europe 2025 brought together thousands of developers, maintainers, and technology leaders to celebrate and advance the open source ecosystem. Among the conference's many sessions and discussions, two announcements stood out as particularly significant for the future of open source collaboration.
-
-![Open Source Summit Europe 2025](ossummit-eu-25.jpg)
-{ .img-fluid }
-
-&nbsp;<br>
 
 ## DocumentDB Joins the Linux Foundation Family
 [DocumentDB joins the Linux Foundation](https://www.linuxfoundation.org/press/linux-foundation-welcomes-documentdb-to-advance-open-developer-first-nosql-innovation), continuing a trend that began last year with [OpenSearch](https://www.linuxfoundation.org/press/linux-foundation-announces-opensearch-software-foundation-to-foster-open-collaboration-in-search-and-analytics) and [Valkey](https://www.linuxfoundation.org/press/linux-foundation-launches-open-source-valkey-community).
