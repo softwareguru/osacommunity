@@ -8,4 +8,4 @@ events:
  - 2023
 ---
 
-Product Manager and ClickHouse user for a handful of years. Based in Madrid, Spain. Now in charge of the Aiven for ClickHouse and Aiven for Cassandra at Aiven.io
+Product Manager and ClickHouse® user for a handful of years. Based in Madrid, Spain. Now in charge of the Aiven for ClickHouse® and Aiven for Cassandra at Aiven.io
