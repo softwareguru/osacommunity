@@ -9,7 +9,7 @@ track: Databases
 video: https://youtu.be/Duh6MJz_CjU?feature=shared
 ---
 
-Proton is a unified streaming and historical analytic engine which is built on top of ClickHouse code base and is in one single binary. It is the core engine which empowers Timeplus core product and open sourced under apache v2 https://github.com/timeplus-io/proton.
+Proton is a unified streaming and historical analytic engine which is built on top of ClickHouse® code base and is in one single binary. It is the core engine which empowers Timeplus core product and open sourced under apache v2 https://github.com/timeplus-io/proton.
  
  
  
@@ -17,8 +17,8 @@ Proton is a unified streaming and historical analytic engine which is built on t
  
  
  
- Timeplus also dedicates to contribute Proton's streaming query processing features back to the ClickHouse community and it is already in progress (Github issue https://github.com/ClickHouse/ClickHouse/issues/54776, and PR https://github.com/ClickHouse/ClickHouse/pull/54870).
+ Timeplus also dedicates to contribute Proton's streaming query processing features back to the ClickHouse® community and it is already in progress (Github issue https://github.com/ClickHouse/ClickHouse/issues/54776, and PR https://github.com/ClickHouse/ClickHouse/pull/54870).
  
  
  
- So we like to present the porting roadmap and hear the feedbacks from the community. We believe with the addition of streaming processing capability, ClickHouse OSS will serve the community users better.
+ So we like to present the porting roadmap and hear the feedbacks from the community. We believe with the addition of streaming processing capability, ClickHouse® OSS will serve the community users better.
