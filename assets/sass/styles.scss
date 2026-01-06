@@ -1,5 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
+$primary-color: #189dd0;
+$secondary-color: #0f3ad8;
+$cyan: #00c7d4;
+$blue: #017cee;
+$orange:#fd7e62;
+$yellow:#ffd200;
+$green: #00ad46;
+$red: #ff2040;
+$indigo: #282661;
+
+/*-------------------------------
+Speakers
+-------------------------------*/
+@import "speaker.scss";
+
+/*-------------------------------
+Session
+-------------------------------*/
+@import "session.scss";
+
+
 body {
     font-family: "Figtree", Courier, Helvetica, Arial, sans-serif;
     font-weight: 400;

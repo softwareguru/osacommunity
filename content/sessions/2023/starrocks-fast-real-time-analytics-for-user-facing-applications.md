@@ -1,14 +1,15 @@
 ---
 title: "StarRocks: Fast Real-Time Analytics for User-Facing Applications"
 slug: starrocks-fast-real-time-analytics-for-user-facing-applications
-authors:
+speakers:
  - Albert Wong
 time_start: 2023-12-13T10:30:00-04:00
 time_end: 2023-12-13T11:00:00-04:00
 track: Databases
 images:
- - AlbertWong.jpg
+ - /images/sessions/2023/AlbertWong.jpg
 slides: 2023/StarRocks.pdf 
+video: https://youtu.be/-9YpmU3gxUY
 ---
 
 Real-time analytics is essential for user-facing applications, such as e-commerce websites, social media platforms, and streaming services. These applications need to be able to analyze data in real time to provide users with personalized experiences and make recommendations.

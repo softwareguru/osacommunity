@@ -1,13 +1,14 @@
 ---
 title: "Unveiling the Power of dbt and DuckDB: Hype vs. Reality"
 slug: unveiling-the-power-of-dbt-and-duckdb-hype-vs-reality
-authors:
+speakers:
  - Cameron Cyr
 time_start: 2023-12-14T10:30:00-04:00
 time_end: 2023-12-14T11:00:00-04:00
 track: Databases
 images:
- - CameronCyr-Hype.jpg
+ - /images/sessions/2023/CameronCyr-Hype.jpg
+video: https://youtu.be/o75UnWio8Bg
 ---
 
 Data professionals and analysts are constantly searching for efficient ways to streamline their ETL/ELT processes. dbt, with its focus on transformation, modeling, and testing, has gained significant traction in the industry. On the other hand, DuckDB, a high-performance analytical database, has gained recognition for its speed and versatility.

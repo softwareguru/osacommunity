@@ -1,47 +1,118 @@
+{{ define "headextra" }}
+  <link rel="stylesheet" href="https://cdn.addevent.com/libs/atc/themes/fff-theme-1/theme.css" type="text/css" media="all" />
+
+  <script type="text/javascript" src="https://cdn.addevent.com/libs/atc/1.6.1/atc.min.js"></script>
+  <script type="text/javascript">
+    window.addeventasync = function(){
+        addeventatc.settings({
+            appleical  : {show:true, text:"Apple Calendar"},
+            google     : {show:true, text:"Google <em>(online)</em>"},
+            office365  : {show:true, text:"Office 365 <em>(online)</em>"},
+            outlook    : {show:true, text:"Outlook"},
+            outlookcom : {show:false, text:"Outlook.com <em>(online)</em>"},
+            yahoo      : {show:false, text:"Yahoo <em>(online)</em>"}
+        });
+    };
+    </script>
+{{ end }}
+
 {{ define "main" }}
 
-<div class="container">
-    <h1>{{ .Title }}</h1>
+<!-- Speaker Detail -->
+<section class="speaker-detail">
+  <div class="container">
+    <div class="row mt-4">
+      <div class="image-column col-lg-3 d-none d-lg-block">
+        <div class="schedule-block col-lg-10 col-md-12 col-sm-12">
+          <div class="sec-title text-center">
+            <span class="title">Speaker(s):</span>
+            <div class="speaker-info" style="margin-bottom: 20px;">
+              {{ range (.GetTerms "speakers") }}
+              <figure class="thumb my-3">
+                <a href="{{ .Permalink }}">
+                  <div class="img-container">
+                    <img src="{{ with .Params.images }}{{ index . 0 | relURL }}{{else}}{{ .Params.Image | relURL }}{{ end }}" alt="{{ .Title }}" class="rounded-circle">
+                  </div>
+                  <h5 class="name">{{ .Title }}</h5>
+                </a> 
+              </figure>
+               {{ end }}
+            </div>
 
-    <div class="row d-flex">
-        <div class="col-4 col-md-2">Event: </div>
-        <div class="col-4 col-md-3">
-            <a href="{{ .CurrentSection.Permalink }}">{{ .CurrentSection.Title }}</a>
-        </div>  
-    </div>
+          </div>
+        </div>
+      </div>
+      <div class="info-column col-lg-9 col-md-12 col-sm-12" style="margin-top: -10px;">
+        <div class="inner-column">
+          <div class="text-box">
+            <div class="session-meta" id="date">
+              <span style="display: none;" id="adjTime"></span>
+              {{ $time_start := .Params.time_start | time }}
+              {{ $time_end := .Params.time_end | time }}            
+              {{ if lt now $time_start }}
+              <!--<div class="d-flex align-items-center">
+                <div class="pe-4">
+                  <em>{{ with .Params.time_start | time }}{{ .Format "Jan-02 15:04" }}{{ end }}-{{ with .Params.time_end | time }}{{ .Format "15:04 MST" }}{{end}} (<span class="localtimelabel">{{.Params.time_start}}</span>-<span class="localtimelabel">{{.Params.time_end}}</span> your timezone)</em>              
+                </div>
+                <div title="Add to Calendar" class="addeventatc" data-styling="none">
+                  Add to Calendar
+                  <span class="addeventatc_icon"></span>
+                  <span class="start">{{ with .Params.time_start | time }}{{ .Format "01/02/2006 3:04 PM" }}{{ end }}</span>
+                  <span class="end">{{ with .Params.time_end | time }}{{ .Format "01/02/2006 3:04 PM" }}{{ end }}</span>
+                  <span class="timezone">UTC</span>
+                  <span class="title">OSACon: {{.Title}}</span>
+                  <span class="description">{{with .Params.speakers}}Presented by {{ delimit . ", " " & "}}.{{end}}{{.Content}}</span>
+                  <span class="location">{{.Site.Params.live_link}}</span>
+                </div>
+              </div>  -->
+              {{ else }}
+                <em>Presented at OSACon {{ $time_start.Format "2006" }}</em>
+              {{ end }}
+            </div>
+            <div class="d-lg-none d-xl-none">
+              By
+              {{ range (.GetTerms "speakers") }}
+              <a class="speaker-inline-item" href="{{ .Permalink }}">{{ .Title }}</a>
+              {{ end }}
+            </div>
 
-    <div class="row d-flex">
-        <div class="col-4 col-md-2">Speaker(s): </div>
-        <div class="col-4 col-md-3">
-            {{ range (.GetTerms "authors") }}
-                  <a href="{{ .Permalink }}">{{ .Title }}</a> <br>
+            {{ with .Params.slides }}
+            <br>
+            <div class="mb-3"><a href='{{ if hasPrefix . "http" }}{{ . }}{{ else }}/slides/{{ . }}{{ end }}' target="_blank" class="btn btn-primary text-white" download><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download align-middle" viewBox="0 0 16 16">
+  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+</svg>&nbsp; Download slides</a></div>
             {{ end }}
-        </div>  
+
+            <div class="content mt-4">{{ .Content }}</div>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="my-3">
-    {{ .Content }}
-    </div>
-
-    {{ with .Params.slides }}
-      {{ if hasPrefix . "http" }}
-        <a href='{{ . }}' target='_blank' download>Download slides</a>
-      {{ else }}  
-        {{ with $.Resources.GetMatch . }}
-          <a href='{{ .Permalink }}' target='_blank' download>Download slides</a>
-        {{ end }}
-      {{ end }}
-    {{ end }}  
-
-
     {{ with .Params.video }}
-    <div class="my-3">
+    <div class="mb-3">
       <iframe id="video-iframe" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0"
         allowtransparency="true" src='{{ replace . "https://youtu.be" "https://www.youtube.com/embed"}}'
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"
         webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
     </div>
     {{ end }}
-</div>
+  </div>
+  </div>
+</section>
+<!--End Speker Detail -->
+
+<script>
+  function adjTime(timeStart, timeEnd) {
+    let dateStart = new Date(Date.parse(timeStart));
+    let dateEnd = new Date(Date.parse(timeEnd));
+    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    let adjString = days[dateStart.getDay()]+", May "+dateStart.getDate()+". "+dateStart.getHours() + ":" + (('0' + dateStart.getMinutes()).slice(-2)) + "-" + dateEnd.getHours() + ":" + (('0' + dateEnd.getMinutes()).slice(-2));
+    document.getElementById("adjTime").innerHTML = adjString;
+  }
+  {{ if lt now $time_start }}
+    adjTime("{{ $time_start.Format "02 Jan 2006 15: 04: 05 MST" }}", "{{ $time_end.Format "02 Jan 2006 15: 04: 05 MST" }}");
+  {{ end }}  
+</script>
 
 {{ end }}

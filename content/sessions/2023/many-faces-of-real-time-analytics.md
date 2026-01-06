@@ -1,14 +1,15 @@
 ---
 title: "Many Faces of Real-time Analytics"
 slug: many-faces-of-real-time-analytics
-authors:
+speakers:
  - Dunith Dhanushka
 time_start: 2023-12-14T09:50:00-04:00
 time_end: 2023-12-14T10:20:00-04:00
 track: Databases
 images: 
- - DunithDhanushka.jpg
+ - /images/sessions/2023/DunithDhanushka.jpg
 slides: 2023/ManyFacesRTA.pdf 
+video: https://youtu.be/mXUAYHFzS6I
 ---
 
 Real-time analytics systems derive meaningful insights from continuous streams of data, enabling organizations to make swift decisions and react fast. However, not all real-time analytics systems are made equal. While they share the same goal in the end, there are differences in how they achieve it. 

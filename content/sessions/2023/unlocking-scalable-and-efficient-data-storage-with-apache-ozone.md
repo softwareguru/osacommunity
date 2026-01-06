@@ -1,14 +1,15 @@
 ---
 title: "Unlocking Scalable and Efficient Data Storage with Apache Ozone"
 slug: unlocking-scalable-and-efficient-data-storage-with-apache-ozone
-authors:
+speakers:
  - Uma Maheswara Rao Gangumalla
 time_start: 2023-12-14T11:50:00-04:00
 time_end: 2023-12-14T12:20:00-04:00
 track: Databases
 images:
- - UmaMaheswara.jpg
-slides: 2023/OzoneArchitecture.pdf 
+ - /images/sessions/2023/UmaMaheswara.jpg
+slides: 2023/OzoneArchitecture.pdf
+video: https://youtu.be/ZeW6vH1YzHY
 ---
 
 In today's data-driven world, organizations are faced with unprecedented volumes of data and increasingly complex storage requirements. To address these challenges, Apache Ozone emerges as a game-changing solution, redefining the landscape of distributed object storage systems.

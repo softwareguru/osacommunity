@@ -1,7 +1,7 @@
 ---
 title: "How Veeva has enhanced their data science and analytics platform (Nitro) using Apache Superset"
 slug: how-veeva-has-enhanced-their-data-science-and-analytics-platform-nitro-using-apache-superset
-authors:
+speakers:
  - Nitesh Baranwal
 time_start: 2023-12-14T09:00:00-04:00
 time_end: 2023-12-14T09:10:00-04:00

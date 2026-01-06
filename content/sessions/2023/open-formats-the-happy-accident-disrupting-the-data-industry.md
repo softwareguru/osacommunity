@@ -1,14 +1,15 @@
 ---
 title: "Open Formats: The Happy Accident Disrupting the Data Industry"
 slug: open-formats-the-happy-accident-disrupting-the-data-industry
-authors:
+speakers:
  - Ryan Blue
 time_start: 2023-12-13T11:50:00-04:00
 time_end: 2023-12-13T12:20:00-04:00
 track: Infrastructure
 images:
- - RyanBlue.jpg
+ - /images/sessions/2023/RyanBlue.jpg
 slides: 2023/HappyAccident.pdf
+video: https://youtu.be/EDVAYx3XBYc
 ---
 
 Analytic databases are quietly going through an unprecedented transformation. Open table formats, led by Apache Iceberg, enable multiple query engines to share one central copy of a table. This will fundamentally change the data industry, by freeing data that’s being held hostage by siloed data vendors.

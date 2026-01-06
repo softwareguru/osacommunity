@@ -1,15 +1,16 @@
 ---
 title: "Query Live Data Using Open Source SQL Engines"
 slug: query-live-data-using-open-source-sql-engines
-authors:
+speakers:
  - Jove Zhong
  - Gang Tao
 time_start: 2023-12-12T10:30:00-04:00
 time_end: 2023-12-12T11:00:00-04:00
 track: Databases
 images:
- - JoveGang.jpg
+ - /images/sessions/2023/JoveGang.jpg
 slides: 2023/QueryLiveData.pdf 
+video: https://youtu.be/6XAvFIRQIG4
 ---
 
 Streaming data is rapidly becoming a key component in modern applications, and Apache Kafka, Redpanda and Apache Pulsar have emerged as a popular and powerful platform for managing and processing these data streams. However, as the volume and complexity of streaming data continue to grow, it becomes increasingly critical to have efficient and effective ways of querying and analyzing this data.

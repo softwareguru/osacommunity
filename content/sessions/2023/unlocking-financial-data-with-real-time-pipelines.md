@@ -1,14 +1,15 @@
 ---
 title: "Unlocking Financial Data with Real-Time Pipelines"
 slug: unlocking-financial-data-with-real-time-pipelines
-authors:
+speakers:
  - Timothy Spann
 time_start: 2023-12-14T11:10:00-04:00
 time_end: 2023-12-14T11:40:00-04:00
 track: Data ingestion
 images:
- - TimothySpann.jpg
-slides: https://www.slideshare.net/bunkertor/osacon-2023-unlocking-financial-data-with-realtime-pipelines 
+ - /images/sessions/2023/TimothySpann.jpg
+slides: https://www.slideshare.net/bunkertor/osacon-2023-unlocking-financial-data-with-realtime-pipelines
+video: https://youtu.be/Q7gF7m4yFi4
 ---
 
 Financial institutions thrive on accurate and timely data to drive critical decision-making processes, risk assessments, and regulatory compliance. However, managing and processing vast amounts of financial data in real-time can be a daunting task. To overcome this challenge, modern data engineering solutions have emerged, combining powerful technologies like Apache Flink, Apache NiFi, Apache Kafka, and Iceberg to create efficient and reliable real-time data pipelines. In this talk, we will explore how this technology stack can unlock the full potential of financial data, enabling organizations to make data-driven decisions swiftly and with confidence.

@@ -1,65 +1,43 @@
 {{ define "main" }}
 
-<div class="container py-3">
-
-    <div>
+<div class="container mb-4">
+    <p class="text-center">
         {{ .Content }}
-    </div>
+    </p>
 
-    {{ if ne .Kind "taxonomy" }}
-
-        {{ range .Pages.ByTitle }}
-        <div class="card border-light-subtle mb-3">
-            <div class="row g-0">
-
-                <div class="col-md-4 d-flex align-items-center">
-                    {{ if isset .Params "images" }}
-                        {{ with .Resources.GetMatch (index .Params.Images 0) }}
-                            {{ $image := .Fill "600x300 Center webp" }}
-                            <img class="img-fluid rounded p-1" src="{{ $image.Permalink }}" loading="lazy" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="featured image {{.Title }}"/>
-                        {{ end }}
-                    {{ end }}
-                </div>
-
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h4 class="card-title text-primary">{{ .Title }}</h4>
-
-                        <div class="card-subtitle text-muted mb-3">
-                            {{ with .Params.authors }}<div class="session-speakers">by {{ delimit . ", " " & " }}</div>{{ end }}          
-
-                            {{ if isset .Params "categories" }}
-                                <svg xmlns="http://www.w3.org/2000/svg" class="feather ms-4"><use href="{{ `images/feather/feather-sprite.svg#folder` | relURL }}"/></svg>
-                                {{ range .Params.categories }}
-                                    <a class="text-decoration-none text-muted ms-2" href="{{ `/categories/` | relLangURL }}{{ . | urlize}}/">{{ . }}</a>
-                                {{end}}
-                            {{ end }}
-
-                            {{ if isset .Params "tags" }}
-                                <svg xmlns="http://www.w3.org/2000/svg" class="feather ms-4"><use href="{{ `images/feather/feather-sprite.svg#tag` | relURL }}"/></svg>
-                                {{ range .Params.tags }}
-                                    <a class="text-decoration-none text-muted ms-2" href="{{ `/tags/` | relLangURL }}{{ . | urlize}}/">{{ . }}</a>
-                                {{ end }}
-                            {{ end }}
-                        </div>
-
-                        <div class="card-text">
-                            {{ with .Params.description }}
-                                {{ . }}
-                            {{ else }}
-                                {{ .Summary | truncate 400 }}
-                            {{ end }}
-                        </div>
-                        
-                        <a class="stretched-link" href="{{.Permalink}}"></a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        {{ end }}
-
+{{ $is_active := eq .RelPermalink "/sessions/" }}
+{{ $recordings := true }}
+    {{ if not $is_active }}
+    <table data-toggle="table" data-search="true" data-search-align="left" class="table" >
+    {{ else }}
+        <table data-toggle="table" data-sortable="true" class="table">
     {{ end }}
+      <thead class="d-none">
+        <tr>
+          <th></th>
+        </tr>
+      </thead>
+        <tbody>
+              {{ range .Data.Pages.ByTitle }}
+            <tr>
+                <td><h5 class="mb-0">
+                    <a class="session-title" href="{{.Permalink}}">{{ .Params.title }}</a>
+                    </h5>
+                    {{ if not $is_active }}
+                        <div style="font-size:16px; font-style:italic;">{{ with .Params.speakers }} With {{ if lt (. | len) 4 }}{{ delimit . ", " " & " }}{{ else }}Multiple speakers{{end}}{{ end }}</div>
+                    <div class="card-abstract mt-2" id="abs-{{.File.TranslationBaseName}}" style="font-size:14px">
+                        {{ .Summary }}
+                    </div>
+                    {{ end }}
+                  </td>
+            </tr>
+            {{ end }}
+        </tbody>
+    </table>
 
 </div>
+        <script src="/js/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/js/bootstrap-table.min.css">
+        <script src="/js/bootstrap-table.min.js"></script>
+
 {{ end }}

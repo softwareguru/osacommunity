@@ -1,13 +1,13 @@
 ---
 title: "Go for Data Processing"
 slug: go-for-data-processing
-authors:
+speakers:
  - Johanna Öjeling
 time_start: 2023-12-13T11:10:00-04:00
 time_end: 2023-12-13T11:40:00-04:00
 track: Data ingestion
 images:
- - JohannaOjeling.jpg
+ - /images/sessions/2023/JohannaOjeling.jpg
 draft: true
 ---
 

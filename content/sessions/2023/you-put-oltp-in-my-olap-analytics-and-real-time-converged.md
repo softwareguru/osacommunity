@@ -1,14 +1,15 @@
 ---
 title: "You put OLTP in my OLAP! Analytics and Real-time Converged"
 slug: you-put-oltp-in-my-olap-analytics-and-real-time-converged
-authors:
+speakers:
  - Felipe Mendes
 time_start: 2023-12-14T11:10:00-04:00
 time_end: 2023-12-14T11:40:00-04:00
 track: Databases
 images:
- - FelipeMendes.jpg
-slides: 2023/YouPutOLTP.pdf 
+ - /images/sessions/2023/FelipeMendes.jpg
+slides: 2023/YouPutOLTP.pdf
+video: https://youtu.be/RWQdvRIzjgU 
 ---
 
 Analytics (OLAP) and Real-time (OLTP) workloads serve distinctly different purposes. OLAP is optimized for data analysis and reporting, while OLTP is optimized for real-time low-latency traffic.

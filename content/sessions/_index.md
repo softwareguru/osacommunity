@@ -4,6 +4,6 @@ subtitle: "Welcome to our archive of sessions."
 
 ---
 
-Welcome to our archive of sessions from past events.
+# OSA Con Sessions Archive
 
 Click on an item to see the sessions of that event.

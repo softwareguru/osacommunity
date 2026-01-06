@@ -1,11 +1,12 @@
 ---
 title: "How we built a zero-ETL data infrastructure for real-time analytics"
 slug: how-we-built-a-zero-etl-data-infrastructure-for-real-time-analytics
-authors:
+speakers:
  - Siddarth Jain
 time_start: 2023-12-14T10:20:00-04:00
 time_end: 2023-12-14T10:30:00-04:00
 track: Data ingestion
+draft: true
 ---
 
 Kenobi is a real-time analytics platform which can ingest JSONs and without any manual intervention for data schema definition or data modelling, enables anyone to create metrics and aggregations on the data.

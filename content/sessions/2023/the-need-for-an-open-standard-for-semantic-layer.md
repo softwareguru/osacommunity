@@ -1,14 +1,15 @@
 ---
 title: "The Need for an Open Standard for Semantic Layer"
 slug: the-need-for-an-open-standard-for-semantic-layer
-authors:
+speakers:
  - Brian Bickell
 time_start: 2023-12-13T11:10:00-04:00
 time_end: 2023-12-13T11:40:00-04:00
 track: Infrastructure
 images:
- - BrianBickell.jpg
+ - /images/sessions/2023/BrianBickell.jpg
 slides: 2023/OpenSemanticLayer.pdf
+video: https://youtu.be/69tB1PLP_3Y
 ---
 
 Join Brian Bickell, Cube's VP of Strategy and Alliances, as he proposes an open standard for the semantic layer, uniting BI tools, embedded analytics, and AI agents. 

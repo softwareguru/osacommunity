@@ -1,7 +1,7 @@
 ---
 title: "Grey-hatting: the developer community’s love language"
 slug: grey-hatting-the-developer-communitys-love-language
-authors:
+speakers:
  - Abby T Miller
 time_start: 2023-12-13T11:00:00-04:00
 time_end: 2023-12-13T11:10:00-04:00

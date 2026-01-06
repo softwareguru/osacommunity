@@ -1,14 +1,15 @@
 ---
 title: "Maybe The Real Modern Data Stack Was the Open Source Tools We Got Along The Way"
 slug: maybe-the-real-modern-data-stack-was-the-open-source-tools-we-got-along-the-way
-authors:
+speakers:
  - Pedram Navid
 time_start: 2023-12-14T10:30:00-04:00
 time_end: 2023-12-14T11:00:00-04:00
 track: Orchestration
 images:
- - PedramNavid.jpg
+ - /images/sessions/2023/PedramNavid.jpg
 slides: 2023/OSSDataStack.pdf
+video: https://youtu.be/7D50THUYkTs
 ---
 
 There are many misconceptions of the Modern Data Stack, and it's easy to forget the real pain it solved and the value it unlocked. 

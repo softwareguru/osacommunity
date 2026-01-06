@@ -18,6 +18,7 @@ enableEmoji = true
   category = "categories"
   series = 'series'
   author = "authors"
+  speaker = "speakers"
 
 [sitemap]
   changefreq = "weekly"
@@ -103,8 +104,8 @@ parent="resources"
 weight = 10
 
 [[menus.main]]
-name = "Sessions OSA CON 2023"
-url = "sessions/2023"
+name = "OSA CON Sessions"
+url = "sessions"
 parent="resources"
 weight = 30
 

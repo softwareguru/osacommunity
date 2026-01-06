@@ -1,0 +1,30 @@
+{{ define "main" }}
+
+<div class="container mb-4">
+    <p class="text-center">
+        {{ .Content }}
+    </p>
+
+    <table id="sessions-table" data-toggle="table" data-search="true" data-search-align="left" data-sortable="true">
+      <thead>
+        <tr>
+          <th data-field="title" data-sortable="true">Title</th>        
+
+        </tr>
+      </thead>
+        <tbody>
+              {{ range .Data.Pages.ByTitle }}
+            <tr>
+                <td><h4 class="mb-0">
+                    <a class="session-title" href="{{.Permalink}}">{{ .Params.title }}</a>
+                    </h4>
+                </td>
+            </tr>
+            {{ end }}
+        </tbody>
+    </table>
+
+</div>
+
+
+{{ end }}
