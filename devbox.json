@@ -1,0 +1,18 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/main/.schema/devbox.schema.json",
+  "packages": [
+    "hugo@0.121.2",
+    "nodejs@20"
+  ],
+  "shell": {
+    "init_hook": [
+      "echo 'OSA Community Dev Environment'",
+      "echo 'Hugo version:' && hugo version"
+    ],
+    "scripts": {
+      "serve": "hugo server --buildDrafts --buildFuture",
+      "build": "hugo --minify",
+      "new-post": "hugo new content posts/$1.md"
+    }
+  }
+}
