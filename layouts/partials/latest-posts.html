@@ -1,37 +1,37 @@
-<div class="container-fluid latest-posts"><section class="container">
-    <h3 class="text-secondary text-center mb-5 text-white">Latest News</h3>  
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4  justify-content-center">
 
     {{ range first 3 (where .Site.RegularPages.ByDate.Reverse "Section" "posts" ) }}
         <div class="col">
 
             <div class="card h-100">
-                <div class="card-body">
-                    <h4 class="card-title">
-                        <a class="stretched-link text-primary text-decoration-none" href="{{ .Permalink }}">
-                            {{ .Title }}
-                        </a>
-                    </h4>
-                    {{ with .Params.authors }}
-                        <p class="card-subtitle text-muted">
-                            by {{ index . 0 }}
-                        </p>
+                {{ if isset .Params "images" }}
+                        {{ with .Resources.GetMatch (index .Params.Images 0) }}
+                            {{ $image := .Fill "600x338 Center webp" }}
+                            <img class="card-img-top" src="{{ $image.Permalink }}" loading="lazy" width="{{ $image.Width }}" alt="featured image {{.Title }}" style="object-fit:scale-down;object-position:top;"/>
+                        {{ end }}
                     {{ end }}
-                    <p class="card-text mt-3">
-                        {{ with .Params.description }}
+                <div class="card-body">
+                    <div class="d-flex mb-2 align-items-center small" style="gap:1rem;">
+                        <div class="section-header mb-0">{{ with .Params.categories }}
+                             {{ index . 0 }}
+                    {{ end }}</div>
+                        <div class="opacity-50">{{ .Date | time.Format ":date_long" }}</div>
+                    </div>
+                    <h4 class="h5 card-title">
+                            {{ .Title }}
+                    </h4>
+                    <p class="card-text mt-3 small opacity-50">
+                        {{ with .Params.description | truncate 100 }}
                             {{ . }}
                         {{ else }}
-                            {{ .Summary | truncate 200 }}
+                            {{ .Summary | truncate 100 }}
                         {{ end }}
                     </p>
                 </div>
-                <div class="card-footer">
-                    <small class="text-muted">{{ .Date | time.Format ":date_long" }}</small>
-                </div>
+                <div class="mt-auto px-3 pb-3"><a class="stretched-link text-decoration-none" href="{{ .Permalink }}" style="font-weight:500">Read more <span aria-hidden="true">→</span></a></div>
             </div>
  
         </div>
     {{ end }}
 
 </div>
-</section></div>

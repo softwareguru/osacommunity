@@ -9,6 +9,10 @@ enableEmoji = true
 #sectionPagesMenu = "main"
 #googleAnalytics = "UA-1511XXXX-X"
 
+
+[security]
+  allowContent = ['.*']
+
 [frontmatter]
   date = ["date", "publishDate", "lastmod"]
   lastmod = ["lastmod", ":fileModTime", ":default"]
@@ -74,10 +78,8 @@ enableEmoji = true
 # https://schema.org/Article
 [params]
   description = "Discover, collaborate, and innovate with developers, projects, and companies across the open-source data stack."
-  images = ['images/logo-h.svg','images/site-feature-image.png']
-  mainMenuLogo = "images/logo-h.svg"
-
-  themeColor = "#fff"
+  images = ['images/logo-osacom-text-light-2026.svg','images/site-feature-image.png']
+  mainMenuLogo = "images/logo-osacom-text-light-2026.svg"
 
   [params.options]
     bootStrapJs = true
@@ -87,9 +89,26 @@ enableEmoji = true
 
 
 [[menus.main]]
-name = "About"
-url = "/manifesto"
+name = "Events"
+url = "/#events"
 weight = 10
+
+[[menus.main]]
+name = "Newsletter"
+url = "/#subscribe-to-newsletter"
+weight = 20
+
+[[menus.main]]
+name = "Participate"
+url = "/#participate"
+weight = 30
+
+[[menus.main]]
+name = "About"
+url = "/#about"
+weight = 40
+
+
 
 [[menus.main]]
 identifier = "resources"
@@ -109,21 +128,13 @@ url = "sessions"
 parent="resources"
 weight = 30
 
-[[menus.main]]
-name = "Events"
-url = "events"
-parent="resources"
-weight = 40
 
 [[menus.main]]
-name = "OSA CON"
+name = 'OSA Con 2026 ↗'
 url = "https://osacon.io"
-weight = 30
-
-[[menus.main]]
-name = "Contact"
-url = "contact"
 weight = 50
+
+
 
 
 [[menus.social]]

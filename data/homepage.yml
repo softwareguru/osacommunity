@@ -18,6 +18,90 @@ jointypes:
       - Get new ideas for using data in your workplace.
       - Speak freely about COSS/SaaS vendors outside the constraints of OSS foundations and vendor neutrality restrictions.
 
+event_photos:
+    - img: IMG_8309.webp
+    - img: IMG_8356.webp
+    - img: SF-meetup-copy.webp
+    - img: NYC-meetup-copy.webp
+    - img: FOSDEM-meetup-copy.webp
+    - img: Chicago-meetup-copy.webp
+
+community_events:
+    - date: 2026-09-02
+      title: Whose Cloud Is It Anyway? Take ownership of your data and your costs with BYOC
+      venue: San Francisco, CA
+      type: Meetup
+      reg_link: https://luma.com/ruft92qf
+      reg_text: RSVP
+
+    - date: 2026-09-08
+      title: Building AI Applications at Scale ft. ClickHouse®, Grafana, and dltHub
+      venue: Berlin, Germany
+      type: Meetup
+      reg_link: https://luma.com/oretqk1d
+      reg_text: RSVP
+
+    - date: 2026-09-10
+      title: Building AI Applications at Scale
+      venue: Warszawa, Poland
+      type: Meetup
+      reg_link: https://luma.com/xitk92gu
+      reg_text: RSVP
+
+    - date: 2026-11-02
+      title: OSA Con 2026 - The Anti-Hype Conference for Open Source Analytics and AI
+      venue: San Francisco, CA + Online
+      type: Conference
+      reg_link: https://luma.com/eis7567t
+      reg_text: Register
+
+participate_cards:
+    - title: Attend a meetup
+      text: "A few times a year we gather in person — SF, NYC, Chicago, Brussels — for short technical talks and open discussion. Online sessions in between."
+      link: See the schedule
+      url: "#events"
+
+    - title: Speak or propose a session
+      text: "Practitioner talks only: what you built, what broke, what you'd do differently. First-time speakers welcome."
+      link: Submit a topic
+      url: https://osacon.io/get-involved
+
+    - title: Join the Slack
+      text: "Ask questions, share benchmarks, and get unstuck with maintainers and engineers in your part of the stack."
+      link: Open the Slack invite
+      url: https://go.osacom.io/slack
+
+    - title: Subscribe to the newsletter
+      text: "One monthly email: upcoming events, new recordings, and community project notes. No vendor pitches."
+      link: Subscribe for updates
+      url: "#subscribe-to-newsletter"
+
+    - title: Partner with the community
+      text: "Host a meetup, contribute venue or infrastructure, or support OSA Con. Project-neutral by design."
+      link: Talk to the organizers
+      url: "/contact"
+
+    - title: Explore OSA Con
+      text: "The annual gathering: Nov 2, 2026, San Francisco + online, free. Plus five years of session recordings."
+      link: Explore OSA Con 2026
+      url: "https://osacon.io"
+
+features_extended:
+    - number: 5+
+      title: Years of Community
+      text: Building connections across the open-source analytics ecosystem.
+
+    - number: 5,000+
+      title: Engineers & Analysts
+      text: A global audience of practitioners and builders.
+
+    - number: 45+
+      title: Countries Represented
+      text: A worldwide community of data professionals.
+
+    - number: 300+
+      title: Technical Talks
+      text: Practical content from experts and practitioners.
 
 
 projects:

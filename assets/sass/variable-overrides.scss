@@ -1,25 +1,27 @@
 // Default variable overrides
 
 // scss-docs-start theme-color-variables
-$primary:       #1a9dcf;
-$secondary:     #6c757d;
+$primary:       #17C0E8;
+$secondary:     #2663FB;
 $success:       #198754;
 $info:          #0dcaf0;
 $warning:       #ffc107;
 $danger:        #dc3545;
-$light:         #f8f9fa;
-$dark:          #212529;
+$light:         #f9f9fc;;
+$dark:          #1F3D76;
 // scss-docs-end theme-color-variables
 
 // Your variable overrides
 $body-bg: #fff;
-$body-color: #363b3f;
-$font-size-base: 1.2rem;
+$body-color: #121D2E;
+$font-size-base: 1rem;
 
 $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
   xl: 1140px,
-  xxl: 1200px
+  xxl: 1220px
 );
+
+
