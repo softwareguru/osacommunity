@@ -1,0 +1,33 @@
+{{ $data := index .Site.Data }}
+<section class="bg-white py-5">
+  <div class="container py-5">
+      <div class="row align-items-end mb-4">
+          <div class="col-12 col-lg-6">
+          <p class="section-header">Community in motion</p>
+          <h2>People in rooms, talking about how they actually build</h2>
+          </div>
+          <div class="col-12 col-lg-6">
+          <p>A few times a year we get in a room together — San Francisco, New York, Chicago, Brussels. Small meetups, hands-on workshops, hallway debugging, and talks from engineers running analytics in production. Slack and online sessions carry it the rest of the year.</p>
+          </div>
+      </div>
+      <div class="row flex-wrap">
+          {{ with $data.homepage }}
+            {{ range .community_events }}
+            <div class="col-12 col-sm-3 mb-4">
+              <div class="card h-100 text-white bg-dark event-card">
+                <div class="card-body h-100 d-flex flex-column">
+                <div class="section-header">{{ .type }}</div>
+                <div class="date h3 mb-0">
+                  {{ $parsedDate := time.AsTime .date }}
+                  {{ $parsedDate.Format "Jan 2, 2006" }}</div>
+                <div class="venue opacity-50 mb-2">{{ .venue }}</div>
+                <h3 class="title mb-auto pb-3">{{ .title }}</h3>
+                <a href="{{ .reg_link }}" target="_blank" class="d-block mt-auto reg-link stretched-link">{{ .reg_text }} <span aria-hidden="true">→</span></a>
+              </div>
+              </div>
+            </div>
+            {{ end }}
+          {{ end }}
+      </div>
+  </div>
+</section>
